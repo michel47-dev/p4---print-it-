@@ -17,5 +17,13 @@ const slides = [
 	}
 ]
 
-	
+let arrowleft = document.querySelector(".arrow_left");
+let arrowright = document.querySelector(".arrow_right");
 
+arrowleft.addEventListener("click", function() {
+	console.log("click gauche");
+});
+
+arrowright.addEventListener("click", function() {
+	console.log("click droite");
+});
