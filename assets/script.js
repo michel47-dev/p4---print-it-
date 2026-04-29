@@ -22,12 +22,18 @@ let arrowright = document.querySelector(".arrow_right");
 
 arrowleft.addEventListener("click", function() {
 	currentIndex--;
+	if (currentIndex < 0) {
+		currentIndex = slides.length - 1;
+	}
 	updateSlide();
 	console.log("click gauche");
 });
 
 arrowright.addEventListener("click", function() {
 	currentIndex++;
+	if (currentIndex === slides.length) {
+		currentIndex = 0;
+	}
 	updateSlide();
 	console.log("click droite");
 });
